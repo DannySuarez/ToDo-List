@@ -4,6 +4,7 @@ body {
 
 ul {
     list-style-type:none; 
+    text-align: center;
 }
 
 li {
@@ -12,4 +13,8 @@ li {
 
 input {
     margin-right: 5px;
+}
+
+#header {
+    text-align: center;
 }
