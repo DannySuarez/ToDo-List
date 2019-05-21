@@ -1,8 +1,13 @@
 function template(todos) {
+    let checked = '';
+    
+    if(todos.completed) {
+        checked = 'checked';
+    }
     const html = 
     `
     <li>
-        <input type="checkbox" name="task">${todos.task}
+        <input ${checked} type="checkbox" name="task">${todos.task}
     </li>
     ` ;
     return html;
