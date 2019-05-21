@@ -4,6 +4,7 @@ const test = QUnit.test;
 QUnit.module('template');
 
 test('test to return html', assert => {
+    
     // Arrange
     const todos = {
         task: 'Learn templates',
@@ -11,7 +12,7 @@ test('test to return html', assert => {
     };
     const expected = /*html*/`
     <li>
-        <input type="checkbox" name="task">Learn templates
+        <input checked type="checkbox" name="task">Learn templates
     </li>
     `;
     // Act
@@ -20,3 +21,23 @@ test('test to return html', assert => {
     // Assert
     assert.htmlEqual(html, expected);
 });
+
+test('test to check if task is false', assert => {
+
+    //arrange
+    const todos = {
+        task: 'Learn templates',
+        completed: false
+    };
+
+    const expected = /*html*/`
+    <li>
+        <input type="checkbox" name="task">Learn templates
+    </li>
+    `;
+    //act
+    const html = template(todos);
+    //assert
+    assert.htmlEqual(html, expected);
+
+})
