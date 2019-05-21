@@ -12,7 +12,7 @@ const todos = [
         completed: false
     },
     {
-        task: 'Buy groceris',
+        task: 'Buy groceries',
         completed: false
     },
     {

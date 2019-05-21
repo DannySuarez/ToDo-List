@@ -40,4 +40,4 @@ test('test to check if task is false', assert => {
     //assert
     assert.htmlEqual(html, expected);
 
-})
+});
