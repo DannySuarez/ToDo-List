@@ -13,7 +13,6 @@ class AddToDo extends Component {
 
             const newToDo = {
                 task: formData.get('task'),
-                // completed: formData.get('completed')
             };
 
             onAdd(newToDo);
@@ -27,7 +26,6 @@ class AddToDo extends Component {
         return /*html*/`
             <form>
                 <label>Task: <input type="text" name="task"></label>
-               <!-- <label>Completed: <input name="completed"></label> -->
                 <button>Add</button>
             </form>
         `;
