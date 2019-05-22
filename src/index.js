@@ -1,17 +1,7 @@
-import template from './template.js';
-import htmlToDOM from './html-to-DOM.js';
-import todos from '../data/todo-data.js';
-import templateHeader from '../src/template-header.js';
+import App from '../components/App.js';
 
-const list = document.getElementById('todo-list');
-const header = document.getElementById('header');
+const app = new App();
+const appDom = app.render();
 
-todos.forEach(todos => {
-    const html = template(todos);
-    const dom = htmlToDOM(html);
-    list.appendChild(dom);
-});
-
-const html = templateHeader();
-const dom = htmlToDOM(html);
-header.appendChild(dom);
+const root = document.getElementById('app');
+root.appendChild(appDom);
