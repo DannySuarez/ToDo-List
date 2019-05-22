@@ -13,7 +13,7 @@ const todos = [
     },
     {
         task: 'Buy groceries',
-        completed: false
+        completed: true
     },
     {
         task: 'Start building a personal site',
